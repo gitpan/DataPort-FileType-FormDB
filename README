@@ -5,11 +5,11 @@ Title Page
 
      DataPort::FilteType::FormDB - Text Form Datatbase with advantages over CSV
 
-     Revision: E
+     Revision: A
 
-     Version: 0.01
+     Version: 0.02
 
-     Date: 2003/06/24
+     Date: 2003/07/07
 
      Prepared for: General Public 
 
@@ -82,26 +82,9 @@ Title Page
     simple and straight forward for Perl or any other programming language
     to process.
 
-    The DataPort::FileType::FormDB module is an integral part of the US DOD
-    SDT2167A bundle of modules. The data used by Test::STDmaker and
-    ExtUtils::SVDmaker are stored in this format.
-
-    The dependency of the program modules in the US DOD STD2167A bundle is
-    as follows:
-
-     File::FileUtil 
-       Test::STD::Scrub
-         Test::Tech
-            DataPort::FileType::FormDB DataPort::DataFile DataPort::Maker Test::STD::Template
-                Test::STDmaker ExtUtils::SVDmaker
-
-    Note the File::FileUtil, Test::STD::STDutil Test::STD::Scrub program
-    modules breaks up the Test::TestUtil program module and Test::TestUtil
-    has disappeared.
-
   1.3 Document overview.
 
-    This document releases DataPort::FileType-FormDB version 0.01 providing
+    This document releases DataPort::FileType-FormDB version 0.02 providing
     description of the inventory, installation instructions and other
     information necessary to utilize and track this release.
 
@@ -113,8 +96,8 @@ Title Page
 
     This document releases the file found at the following repository(s):
 
-       http://www.softwarediamonds/packages/DataPort-FileType-FormDB-0.01
-       http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/DataPort-FileType-FormDB-0.01
+       http://www.softwarediamonds/packages/DataPort-FileType-FormDB-0.02
+       http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/DataPort-FileType-FormDB-0.02
 
     Restrictions regarding duplication and license provisions are as
     follows:
@@ -159,14 +142,14 @@ Title Page
 
      file                                                         version date       comment
      ------------------------------------------------------------ ------- ---------- ------------------------
-     lib/Docs/Site_SVD/DataPort_FileType_FormDB.pm                0.01    2003/06/24 revised 0.05
-     MANIFEST                                                     0.01    2003/06/24 generated, replaces 0.05
-     Makefile.PL                                                  0.01    2003/06/24 generated, replaces 0.05
-     README                                                       0.01    2003/06/24 generated, replaces 0.05
+     lib/Docs/Site_SVD/DataPort_FileType_FormDB.pm                0.02    2003/07/07 revised 0.01
+     MANIFEST                                                     0.02    2003/07/07 generated, replaces 0.01
+     Makefile.PL                                                  0.02    2003/07/07 generated, replaces 0.01
+     README                                                       0.02    2003/07/07 generated, replaces 0.01
      lib/DataPort/FileType/FormDB.pm                              0.02    2003/06/23 unchanged
-     t/DataPort/FormDB.d                                          0.04    2003/06/24 revised 0.03
-     t/DataPort/FormDB.pm                                         0.03    2003/06/24 revised 0.02
-     t/DataPort/FormDB.t                                          0.06    2003/06/24 revised 0.05
+     t/DataPort/FormDB.d                                          0.05    2003/07/07 revised 0.04
+     t/DataPort/FormDB.pm                                         0.04    2003/07/07 revised 0.03
+     t/DataPort/FormDB.t                                          0.07    2003/07/07 revised 0.06
      t/DataPort/FormDB0.tdb                                       0.01    2003/06/08 unchanged
      t/DataPort/FormDBa2.tdb                                      0.01    2003/06/08 unchanged
      t/DataPort/FormDBa2.txt                                      0.01    2003/06/08 unchanged
@@ -180,26 +163,6 @@ Title Page
      t/DataPort/FormDBs0.tdb                                      0.01    2003/06/08 unchanged
 
   3.3 Changes
-
-    Changes to the previous version are as follows:
-
-    Broke up the package "File::FileUtil" into packages with functional
-    similar functions with a more descriptive package name.
-
-    Replace "File::FileUtil" with "File::Package", "File::smartNL" and
-    "File::TestPath".
-
-    Changed in t\DataPort\FormDB.t
-
-    From:
-
-      my ($record,$fields) = ('','');
-      my ($$record_p, $$fields_p) = ($record,$fields);
-
-    To:
-
-      my ($record,$fields) = ('','');
-      my ($record_p, $fields_p) = ($record,$fields);
 
     Changes to previous revisions are as follows:
 
@@ -299,6 +262,31 @@ Title Page
               my ($record,$fields) = ('','');
               my ($$record_p, $$fields_p) = ($record,$fields);
 
+    DataPort_FileType_FormDB 0.01
+        *   Broke up the package "File::FileUtil" into packages with
+            functional similar functions with a more descriptive package
+            name.
+
+            Replace "File::FileUtil" with "File::Package", "File::smartNL"
+            and "File::TestPath".
+
+            Changed in t\DataPort\FormDB.t
+
+        *   Still failing on Unix with "Can't declare scalar dereference"
+
+            From:
+
+              my ($record,$fields) = ('','');
+              my ($$record_p, $$fields_p) = ($record,$fields);
+
+            To:
+
+              my ($record,$fields) = ('','');
+              my ($record_p, $fields_p) = ($record,$fields);
+
+    DataPort_FileType_FormDB 0.02
+        Updated the prerequisite list.
+
   3.4 Adaptation data.
 
     This installation requires that the installation site has the Perl
@@ -335,16 +323,16 @@ Title Page
 
         The distribution file is at the following respositories:
 
-           http://www.softwarediamonds/packages/DataPort-FileType-FormDB-0.01
-           http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/DataPort-FileType-FormDB-0.01
+           http://www.softwarediamonds/packages/DataPort-FileType-FormDB-0.02
+           http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/DataPort-FileType-FormDB-0.02
 
     Prerequistes.
-         'Test::Tech' => 1.08,
-         'Test::STD::Scrub' => 1.07,
-         'File::Package' => 0,
-         'File::SmartNL' => 0,
-         'File::TestPath' => 0,
-         'DataPort::DataFile' => 0,
+         'Test::Tech' => '1.08',
+         'Text::Scrub' => '0',
+         'File::Package' => '0',
+         'File::SmartNL' => '0',
+         'File::TestPath' => '0',
+         'DataPort::DataFile' => '0',
 
     Security, privacy, or safety precautions.
         None.
@@ -374,70 +362,8 @@ Title Page
 
     .t  extension for a Perl test script file
 
-    DID Data Item Description
-
-    DOD Department of Defense
-
-    POD Plain Old Documentation
-
-    SVD Software Version Description
-
-    US  United States
-
 2.0 SEE ALSO
-    Modules with end-user functional interfaces relating to US DOD 2167A
-    automation are as follows:
-
-    Test::STDmaker
-    ExtUtils::SVDmaker
     DataPort::FileType::FormDB
+
     DataPort::DataFile
-    Test::Tech
-    Test
-    Data::Dumper
-    Test::STD::Scrub
-    Test::STD::STDutil
-    File::FileUtil
-    The design modules for Test::STDmaker have no other conceivable use then
-    to support the Test::STDmaker functional interface. The Test::STDmaker
-    design module are as follows:
 
-    Test::STD::Check
-    Test::STD::FileGen
-    Test::STD::STD2167
-    Test::STD::STDgen
-    Test::STDtype::Demo
-    Test::STDtype::STD
-    Test::STDtype::Verify
-    Some US DOD 2167A Software Development Standard, DIDs and other related
-    documents that complement the US DOD 2167A automation are as follows:
-
-    US DOD Software Development Standard
-    US DOD Specification Practices
-    Computer Operation Manual (COM) DID
-    Computer Programming Manual (CPM) DID)
-    Computer Resources Integrated Support Document (CRISD) DID
-    Computer System Operator's Manual (CSOM) DID
-    Database Design Description (DBDD) DID
-    Engineering Change Proposal (ECP) DID
-    Firmware support Manual (FSM) DID
-    Interface Design Document (IDD) DID
-    Interface Requirements Specification (IRS) DID
-    Operation Concept Description (OCD) DID
-    Specification Change Notice (SCN) DID
-    Software Design Specification (SDD) DID
-    Software Development Plan (SDP) DID
-    Software Input and Output Manual (SIOM) DID
-    Software Installation Plan (SIP) DID
-    Software Programmer's Manual (SPM) DID
-    Software Product Specification (SPS) DID
-    Software Requirements Specification (SRS) DID
-    System or Segment Design Document (SSDD) DID
-    System or Subsystem Specification (SSS) DID
-    Software Test Description (STD) DID
-    Software Test Plan (STP) DID
-    Software Test Report (STR) DID
-    Software Transition Plan (STrP) DID
-    Software User Manual (SUM) DID
-    Software Version Description (SVD) DID
-    Version Description Document (VDD) DID

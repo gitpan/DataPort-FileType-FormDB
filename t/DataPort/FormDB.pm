@@ -10,8 +10,8 @@ use warnings;
 use warnings::register;
 
 use vars qw($VERSION $DATE $FILE );
-$VERSION = '0.03';
-$DATE = '2003/06/24';
+$VERSION = '0.04';
+$DATE = '2003/07/07';
 $FILE = __FILE__;
 
 ########
@@ -40,7 +40,7 @@ $FILE = __FILE__;
 
  Version: 
 
- Date: 2003/06/24
+ Date: 2003/07/07
 
  Prepared for: General Public 
 
@@ -90,10 +90,11 @@ L<STD FormDB Test Description Fields|Test::STDmaker/STD FormDB Test Description 
      my $snl = 'File::SmartNL';
      use File::Package;
      my $fp = 'File::Package';
+     my $loaded = '';
  ^
  VO: ^
   N: UUT not loaded^
-  A: my $loaded = $fp->is_package_loaded('DataPort::FileType::FormDB')^
+  A: $loaded = $fp->is_package_loaded('DataPort::FileType::FormDB')^
   E:  ''^
  ok: 1^
 
@@ -121,10 +122,8 @@ L<STD FormDB Test Description Fields|Test::STDmaker/STD FormDB Test Description 
      unlink 'FormDBa1.txt';
      my $dbh_in = new DataPort::FileType::FormDB(flag=>'<', file=>'FormDB0.tdb');
      my $dbh_out = new DataPort::FileType::FormDB(flag=>'>', file=>'FormDBa1.tdb');
-
      my ($record,$fields) = ('','');
      my ($record_p, $fields_p) = ($record,$fields);
-
      my $array_p = [];
      while( $dbh_in->get_record($record_p) ) {
          $dbh_in->decode_record($record_p,$fields_p);
@@ -610,7 +609,20 @@ L<DataPort::FileType::FormDB>
 =back
 
 =for html
-
+<hr>
+<p><br>
+<!-- BLK ID="NOTICE" -->
+<!-- /BLK -->
+<p><br>
+<!-- BLK ID="OPT-IN" -->
+<!-- /BLK -->
+<p><br>
+<!-- BLK ID="EMAIL" -->
+<!-- /BLK -->
+<p><br>
+<!-- BLK ID="LOG_CGI" -->
+<!-- /BLK -->
+<p><br>
 
 =cut
 
@@ -639,11 +651,13 @@ Verify: FormDB.t^
 
     use File::Package;
     my $fp = 'File::Package';
+
+    my $loaded = '';
 ^
 
 VO: ^
  N: UUT not loaded^
- A: my $loaded = $fp->is_package_loaded('DataPort::FileType::FormDB')^
+ A: $loaded = $fp->is_package_loaded('DataPort::FileType::FormDB')^
  E:  ''^
 ok: 1^
 
@@ -982,7 +996,24 @@ ANY WAY OUT OF THE POSSIBILITY OF SUCH DAMAGE.
 <p><br>
 ^
 
-HTML: ^
+
+HTML:
+<hr>
+<p><br>
+<!-- BLK ID="NOTICE" -->
+<!-- /BLK -->
+<p><br>
+<!-- BLK ID="OPT-IN" -->
+<!-- /BLK -->
+<p><br>
+<!-- BLK ID="EMAIL" -->
+<!-- /BLK -->
+<p><br>
+<!-- BLK ID="LOG_CGI" -->
+<!-- /BLK -->
+<p><br>
+^
+
 
 
 ~-~
