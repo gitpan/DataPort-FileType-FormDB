@@ -10,30 +10,30 @@ use warnings;
 use warnings::register;
 
 use vars qw($VERSION $DATE $FILE );
-$VERSION = '0.02';
-$DATE = '2003/07/07';
+$VERSION = '0.03';
+$DATE = '2003/07/08';
 $FILE = __FILE__;
 
 use vars qw(%INVENTORY);
 %INVENTORY = (
-    'lib/Docs/Site_SVD/DataPort_FileType_FormDB.pm' => [qw(0.02 2003/07/07), 'revised 0.01'],
-    'MANIFEST' => [qw(0.02 2003/07/07), 'generated, replaces 0.01'],
-    'Makefile.PL' => [qw(0.02 2003/07/07), 'generated, replaces 0.01'],
-    'README' => [qw(0.02 2003/07/07), 'generated, replaces 0.01'],
+    'lib/Docs/Site_SVD/DataPort_FileType_FormDB.pm' => [qw(0.03 2003/07/08), 'revised 0.02'],
+    'MANIFEST' => [qw(0.03 2003/07/08), 'generated, replaces 0.02'],
+    'Makefile.PL' => [qw(0.03 2003/07/08), 'generated, replaces 0.02'],
+    'README' => [qw(0.03 2003/07/08), 'generated, replaces 0.02'],
     'lib/DataPort/FileType/FormDB.pm' => [qw(0.02 2003/06/23), 'unchanged'],
-    't/DataPort/FormDB.d' => [qw(0.05 2003/07/07), 'revised 0.04'],
-    't/DataPort/FormDB.pm' => [qw(0.04 2003/07/07), 'revised 0.03'],
-    't/DataPort/FormDB.t' => [qw(0.07 2003/07/07), 'revised 0.06'],
+    't/DataPort/FormDB.d' => [qw(0.06 2003/07/08), 'revised 0.05'],
+    't/DataPort/FormDB.pm' => [qw(0.05 2003/07/08), 'revised 0.04'],
+    't/DataPort/FormDB.t' => [qw(0.08 2003/07/08), 'revised 0.07'],
     't/DataPort/FormDB0.tdb' => [qw(0.01 2003/06/08), 'unchanged'],
     't/DataPort/FormDBa2.tdb' => [qw(0.01 2003/06/08), 'unchanged'],
     't/DataPort/FormDBa2.txt' => [qw(0.01 2003/06/08), 'unchanged'],
     't/DataPort/FormDBa3.tdb' => [qw(0.01 2003/06/08), 'unchanged'],
     't/DataPort/FormDBa3.txt' => [qw(0.01 2003/06/08), 'unchanged'],
     't/DataPort/FormDBa4.tdb' => [qw(0.01 2003/06/08), 'unchanged'],
-    't/DataPort/FormDBa4.txt' => [qw(0.01 2003/06/08), 'unchanged'],
+    't/DataPort/FormDBa4.txt' => [qw(0.02 2003/07/08), 'revised 0.01'],
     't/DataPort/FormDBr2.txt' => [qw(0.01 2003/06/08), 'unchanged'],
     't/DataPort/FormDBr3.txt' => [qw(0.01 2003/06/08), 'unchanged'],
-    't/DataPort/FormDBr4.txt' => [qw(0.01 2003/06/08), 'unchanged'],
+    't/DataPort/FormDBr4.txt' => [qw(0.02 2003/07/08), 'revised 0.01'],
     't/DataPort/FormDBs0.tdb' => [qw(0.01 2003/06/08), 'unchanged'],
 
 );
@@ -61,11 +61,11 @@ use vars qw(%INVENTORY);
 
  DataPort::FilteType::FormDB - Text Form Datatbase with advantages over CSV
 
- Revision: A
+ Revision: B
 
- Version: 0.02
+ Version: 0.03
 
- Date: 2003/07/07
+ Date: 2003/07/08
 
  Prepared for: General Public 
 
@@ -147,7 +147,7 @@ Perl or any other programming language to process.
 
 =head2 1.3 Document overview.
 
-This document releases DataPort::FileType-FormDB version 0.02
+This document releases DataPort::FileType-FormDB version 0.03
 providing description of the inventory, installation
 instructions and other information necessary to
 utilize and track this release.
@@ -163,8 +163,8 @@ system file specification.
 This document releases the file found
 at the following repository(s):
 
-   http://www.softwarediamonds/packages/DataPort-FileType-FormDB-0.02
-   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/DataPort-FileType-FormDB-0.02
+   http://www.softwarediamonds/packages/DataPort-FileType-FormDB-0.03
+   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/DataPort-FileType-FormDB-0.03
 
 
 Restrictions regarding duplication and license provisions
@@ -232,24 +232,24 @@ consists of the following files:
 
  file                                                         version date       comment
  ------------------------------------------------------------ ------- ---------- ------------------------
- lib/Docs/Site_SVD/DataPort_FileType_FormDB.pm                0.02    2003/07/07 revised 0.01
- MANIFEST                                                     0.02    2003/07/07 generated, replaces 0.01
- Makefile.PL                                                  0.02    2003/07/07 generated, replaces 0.01
- README                                                       0.02    2003/07/07 generated, replaces 0.01
+ lib/Docs/Site_SVD/DataPort_FileType_FormDB.pm                0.03    2003/07/08 revised 0.02
+ MANIFEST                                                     0.03    2003/07/08 generated, replaces 0.02
+ Makefile.PL                                                  0.03    2003/07/08 generated, replaces 0.02
+ README                                                       0.03    2003/07/08 generated, replaces 0.02
  lib/DataPort/FileType/FormDB.pm                              0.02    2003/06/23 unchanged
- t/DataPort/FormDB.d                                          0.05    2003/07/07 revised 0.04
- t/DataPort/FormDB.pm                                         0.04    2003/07/07 revised 0.03
- t/DataPort/FormDB.t                                          0.07    2003/07/07 revised 0.06
+ t/DataPort/FormDB.d                                          0.06    2003/07/08 revised 0.05
+ t/DataPort/FormDB.pm                                         0.05    2003/07/08 revised 0.04
+ t/DataPort/FormDB.t                                          0.08    2003/07/08 revised 0.07
  t/DataPort/FormDB0.tdb                                       0.01    2003/06/08 unchanged
  t/DataPort/FormDBa2.tdb                                      0.01    2003/06/08 unchanged
  t/DataPort/FormDBa2.txt                                      0.01    2003/06/08 unchanged
  t/DataPort/FormDBa3.tdb                                      0.01    2003/06/08 unchanged
  t/DataPort/FormDBa3.txt                                      0.01    2003/06/08 unchanged
  t/DataPort/FormDBa4.tdb                                      0.01    2003/06/08 unchanged
- t/DataPort/FormDBa4.txt                                      0.01    2003/06/08 unchanged
+ t/DataPort/FormDBa4.txt                                      0.02    2003/07/08 revised 0.01
  t/DataPort/FormDBr2.txt                                      0.01    2003/06/08 unchanged
  t/DataPort/FormDBr3.txt                                      0.01    2003/06/08 unchanged
- t/DataPort/FormDBr4.txt                                      0.01    2003/06/08 unchanged
+ t/DataPort/FormDBr4.txt                                      0.02    2003/07/08 revised 0.01
  t/DataPort/FormDBs0.tdb                                      0.01    2003/06/08 unchanged
 
 
@@ -404,6 +404,11 @@ To:
 
 Updated the prerequisite list.
 
+=item DataPort_FileType_FormDB 0.03
+
+For test 9, must write out in binary and not cook the newline.
+This added a extre \r character.
+
 =back
 
 =head2 3.4 Adaptation data.
@@ -446,8 +451,8 @@ Follow the instructions for the the chosen installation software.
 
 The distribution file is at the following respositories:
 
-   http://www.softwarediamonds/packages/DataPort-FileType-FormDB-0.02
-   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/DataPort-FileType-FormDB-0.02
+   http://www.softwarediamonds/packages/DataPort-FileType-FormDB-0.03
+   http://www.perl.com/CPAN-local/authors/id/S/SO/SOFTDIA/DataPort-FileType-FormDB-0.03
 
 
 =item Prerequistes.
@@ -535,11 +540,11 @@ __DATA__
 DISTNAME: DataPort-FileType-FormDB^
 REPOSITORY_DIR: packages^
 
-VERSION : 0.02^
+VERSION : 0.03^
 FREEZE: 0^
 PREVIOUS_DISTNAME:  ^
-PREVIOUS_RELEASE: 0.01^
-REVISION: A^
+PREVIOUS_RELEASE: 0.02^
+REVISION: B^
 
 AUTHOR  : SoftwareDiamonds.com E<lt>support@SoftwareDiamonds.comE<gt>^
 ABSTRACT: 
@@ -566,7 +571,6 @@ REPOSITORY:
 ^
 
 RESTRUCTURE:  ^
-
 CHANGE2CURRENT:  ^
 
 AUTO_REVISE:
@@ -738,6 +742,11 @@ To:
 \=item DataPort_FileType_FormDB 0.02
 
 Updated the prerequisite list.
+
+\=item DataPort_FileType_FormDB 0.03
+
+For test 9, must write out in binary and not cook the newline.
+This added a extre \r character.
 
 \=back
 ^

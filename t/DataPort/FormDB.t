@@ -7,8 +7,8 @@ use warnings;
 use warnings::register;
 
 use vars qw($VERSION $DATE $FILE);
-$VERSION = '0.07';   # automatically generated file
-$DATE = '2003/07/07';
+$VERSION = '0.08';   # automatically generated file
+$DATE = '2003/07/08';
 $FILE = __FILE__;
 
 use Test::Tech;
@@ -325,9 +325,9 @@ ok(  $snl->fin('FormDBa1.tdb'), # actual results
     ($$record_p, $$fields_p) = ('','');
     while( $dbh_in->get_record($record_p) ) {
         $dbh_in->decode_record($record_p, $record_p);
-        $snl->fout( 'FormDBr1.txt',$$record_p . "\n~-~\n", {append=>1} );
+        $snl->fout( 'FormDBr1.txt',$$record_p . "\n~-~\n", {append=>1, binary=>1} );
         $dbh_in->decode_field($record_p, $array_p);
-        $snl->fout( 'FormDBa1.txt',join("\n",@$array_p) . "\n~-~\n", {append=>1});
+        $snl->fout( 'FormDBa1.txt',join("\n",@$array_p) . "\n~-~\n", {append=>1, binary=>1});
         ($$record_p, $$fields_p) = ('','');
         $dbh_out->encode_field( $array_p, $record_p );
         $dbh_out->encode_record( $record_p, $record_p);

@@ -8,11 +8,11 @@ End_User
 
 Copyright
 
-copyright © 2003 Software Diamonds.
-
-Software Diamonds permits unlimited redistribution
-and use in source and binary forms, with or
-without modification.
+copyright © 2003 Software Diamonds.
+
+Software Diamonds permits unlimited redistribution
+and use in source and binary forms, with or
+without modification.
 Author
 http://www.SoftwareDiamonds.com support@SoftwareDiamonds.com
 SVD
